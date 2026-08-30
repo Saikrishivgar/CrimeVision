@@ -1,0 +1,18 @@
+# CrimeVision-YOLO Dataset Configuration
+
+path: /Users/saikrishivgars/Desktop/YOLOO/CrimeVision-YOLO/dataset # dataset root dir
+train: images/train # train images (relative to 'path')
+val: images/val # val images (relative to 'path')
+test: images/test # test images (relative to 'path')
+
+# Classes
+nc: 8
+names:
+  0: person
+  1: knife
+  2: gun
+  3: fire
+  4: smoke
+  5: helmet
+  6: backpack
+  7: vehicle

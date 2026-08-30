@@ -1,0 +1,83 @@
+# OS & System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+venv/
+*/venv/
+.venv/
+*/.venv/
+env/
+ENV/
+
+# Node.js & Next.js
+node_modules/
+*/node_modules/
+.next/
+*/.next/
+.out/
+*/.out/
+.vercel/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+next-env.d.ts
+*.tsbuildinfo
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Datasets and Archives
+archive*/
+archive (1)/
+
+# Model Weights & TorchScript (>50MB / binary artifacts)
+*.pt
+*.pth
+*.onnx
+*.bin
+*.weights
+*.safetensors
+*.engine
+mobileclip_blt.ts
+**/mobileclip_blt.ts
+
+# Databases & Runtime Generated Storage / Media
+*.db
+*.sqlite
+*.sqlite3
+storage/
+**/storage/
+uploads/
+**/uploads/
+runs/
+**/runs/
+
+# Temporary / test outputs
+out.json
+test_output.txt
+**/test_output.txt

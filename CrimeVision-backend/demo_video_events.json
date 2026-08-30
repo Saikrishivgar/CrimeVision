@@ -1,0 +1,134 @@
+[
+  {
+    "event_id": "evt_001",
+    "video_id": "demo_001",
+    "video_name": "surveillance_demo.mp4",
+    "camera_id": "CAM_01",
+    "location": "Main Gate",
+    "frame": 96,
+    "timestamp": 3.2,
+    "track_id": 1,
+    "object": "person",
+    "attributes": {
+      "shirt_color": "red",
+      "pants_color": "black"
+    },
+    "action": "walking",
+    "bbox": [100, 150, 200, 300],
+    "confidence": 0.95,
+    "clip_start": 0.2,
+    "clip_end": 6.2,
+    "description": "Person wearing red shirt and black pants walking."
+  },
+  {
+    "event_id": "evt_002",
+    "video_id": "demo_001",
+    "video_name": "surveillance_demo.mp4",
+    "camera_id": "CAM_01",
+    "location": "Main Gate",
+    "frame": 201,
+    "timestamp": 6.7,
+    "track_id": 2,
+    "object": "car",
+    "attributes": {
+      "vehicle_color": "red",
+      "vehicle_type": "SUV",
+      "vehicle_make": "Toyota",
+      "vehicle_model": "Innova"
+    },
+    "action": "passing",
+    "bbox": [500, 200, 800, 400],
+    "confidence": 0.88,
+    "clip_start": 3.7,
+    "clip_end": 9.7,
+    "description": "Red SUV passing through Main Gate."
+  },
+  {
+    "event_id": "evt_003",
+    "video_id": "demo_001",
+    "video_name": "surveillance_demo.mp4",
+    "camera_id": "CAM_01",
+    "location": "Main Gate",
+    "frame": 342,
+    "timestamp": 11.4,
+    "track_id": 3,
+    "object": "person",
+    "attributes": {
+      "shirt_color": "red",
+      "pants_color": "jeans"
+    },
+    "action": "walking",
+    "bbox": [120, 160, 220, 310],
+    "confidence": 0.92,
+    "clip_start": 8.4,
+    "clip_end": 14.4,
+    "description": "Person wearing red shirt walking."
+  },
+  {
+    "event_id": "evt_004",
+    "video_id": "demo_001",
+    "video_name": "surveillance_demo.mp4",
+    "camera_id": "CAM_01",
+    "location": "Main Gate",
+    "frame": 474,
+    "timestamp": 15.8,
+    "track_id": 4,
+    "object": "car",
+    "attributes": {
+      "vehicle_color": "white",
+      "vehicle_type": "sedan",
+      "vehicle_make": "Honda",
+      "vehicle_model": "Civic"
+    },
+    "action": "parked",
+    "bbox": [300, 250, 600, 450],
+    "confidence": 0.90,
+    "clip_start": 12.8,
+    "clip_end": 18.8,
+    "description": "White sedan parked."
+  },
+  {
+    "event_id": "evt_005",
+    "video_id": "demo_001",
+    "video_name": "surveillance_demo.mp4",
+    "camera_id": "CAM_01",
+    "location": "Main Gate",
+    "frame": 603,
+    "timestamp": 20.1,
+    "track_id": 5,
+    "object": "person",
+    "attributes": {
+      "shirt_color": "red",
+      "pants_color": "black"
+    },
+    "action": "walking",
+    "bbox": [150, 170, 250, 320],
+    "confidence": 0.89,
+    "clip_start": 17.1,
+    "clip_end": 23.1,
+    "description": "Person wearing red shirt walking."
+  },
+  {
+    "event_id": "evt_006",
+    "video_id": "demo_001",
+    "video_name": "surveillance_demo.mp4",
+    "camera_id": "CAM_01",
+    "location": "Main Gate",
+    "frame": 705,
+    "timestamp": 23.5,
+    "track_id": 6,
+    "object": "car",
+    "attributes": {
+      "vehicle_color": "red",
+      "vehicle_type": "SUV",
+      "vehicle_make": "Ford",
+      "vehicle_model": "Explorer"
+    },
+    "action": "passing",
+    "bbox": [550, 210, 850, 410],
+    "confidence": 0.85,
+    "clip_start": 20.5,
+    "clip_end": 26.5,
+    "description": "Red SUV passing through Main Gate."
+  }
+]

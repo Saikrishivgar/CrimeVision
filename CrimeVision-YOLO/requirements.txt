@@ -1,0 +1,6 @@
+ultralytics
+opencv-python
+supervision
+roboflow
+# YOLOE prompt embeddings use the Ultralytics-maintained OpenAI CLIP package.
+git+https://github.com/ultralytics/CLIP.git

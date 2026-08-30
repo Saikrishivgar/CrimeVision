@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom dark mode palette */
+:root {
+  --color-primary: hsl(170, 80%, 40%);
+  --color-background: hsl(210, 15%, 5%);
+  --color-surface: hsl(210, 15%, 8%);
+  --color-muted: hsl(210, 10%, 20%);
+}
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-surface);
+}
