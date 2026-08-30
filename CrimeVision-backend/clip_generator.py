@@ -1,5 +1,12 @@
 import os
+import shutil
 import subprocess
+
+
+def _ffmpeg_bin():
+    """Resolve ffmpeg binary — works on Render (Linux) and macOS (Homebrew)."""
+    return shutil.which("ffmpeg") or "/opt/homebrew/bin/ffmpeg"
+
 
 def generate_clip(video_path, clip_start, clip_end, output_path):
     """
@@ -9,10 +16,11 @@ def generate_clip(video_path, clip_start, clip_end, output_path):
         return output_path
         
     duration = clip_end - clip_start
+    ffmpeg = _ffmpeg_bin()
     
     # First attempt: stream copy (fast)
     cmd = [
-        "/opt/homebrew/bin/ffmpeg",
+        ffmpeg,
         "-y",
         "-ss", str(clip_start),
         "-i", video_path,
@@ -27,7 +35,7 @@ def generate_clip(video_path, clip_start, clip_end, output_path):
         print(f"Stream copy failed, trying re-encoding: {e}")
         # Second attempt: re-encode (slower, but more reliable for precise cuts)
         cmd = [
-            "/opt/homebrew/bin/ffmpeg",
+            ffmpeg,
             "-y",
             "-ss", str(clip_start),
             "-i", video_path,

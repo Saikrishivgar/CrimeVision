@@ -13,7 +13,13 @@ class VehicleClassifier:
         self.threshold = threshold
         self.model = None
         self.processor = None
-        self.device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+        device_override = os.environ.get("CRIMEVISION_DEVICE")
+        if device_override:
+            self.device = torch.device(device_override)
+        elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            self.device = torch.device("mps")
+        else:
+            self.device = torch.device("cpu")
         
         # Standardized Brands for Hybrid Search
         self.STANDARD_BRANDS = {

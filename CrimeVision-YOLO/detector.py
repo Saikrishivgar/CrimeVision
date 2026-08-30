@@ -28,8 +28,14 @@ class YOLODetector:
             list of dicts containing bbox, class, confidence, track_id
         """
         import torch
-        # Try MPS if available, fallback to CPU
-        device = "mps" if torch.backends.mps.is_available() else "cpu"
+        # Use env override for cloud deployment (e.g. CRIMEVISION_DEVICE=cpu on Render)
+        device_override = os.environ.get("CRIMEVISION_DEVICE")
+        if device_override:
+            device = device_override
+        elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            device = "mps"
+        else:
+            device = "cpu"
         
         # Apple Silicon MPS can sometimes deadlock with ultralytics multiprocessing,
         # but the user requested MPS for speed. We'll use MPS and if it hangs, it's a known PyTorch issue.

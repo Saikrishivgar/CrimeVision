@@ -1,3 +1,23 @@
+# Core API
 fastapi
-uvicorn
+uvicorn[standard]
 python-multipart
+
+# Computer Vision
+opencv-python-headless
+Pillow
+numpy
+
+# YOLO / Detection
+ultralytics
+
+# ML Models (HuggingFace)
+transformers
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# Vector Search (optional — app degrades gracefully without it)
+faiss-cpu
+
+# Misc
+pydantic

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: crimevision-backend
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: cd CrimeVision-backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: CRIMEVISION_DEVICE
+        value: cpu
+      - key: GROUNDING_DINO_ENABLED
+        value: "false"
+      - key: DEMO_MODE
+        value: "false"
